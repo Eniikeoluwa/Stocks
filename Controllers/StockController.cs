@@ -30,7 +30,7 @@ namespace myWebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] int id) 
         {
-            var stock = await _context.Stock.FindAsync(id);
+            var stock = await _stockRepo.GetByIdAsync(id);
 
             if (stock == null) 
             {
