@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ejc7em9ee7LOnZjz+3L4SogjZSxA39cd6CUUES+N5kLV2nLbNM+exxgLCowXyFu1qP8ga0aSoeGs+fdqYR7jnA==",
+  "dgSpecHash": "612R4IJgxOCd3/qQ6fOE7+OkbDqhfN7K9WGgQEsiBI+zqsks3D5GwXdLNQmZpvqrT+439f+DggqaI145OGCnsA==",
   "success": true,
   "projectFilePath": "/Users/mac/dotnetwebAPI2/myWebApi/myWebApi.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.4/microsoft.aspnetcore.authentication.jwtbearer.8.0.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.4/microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.4/microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/8.0.4/microsoft.aspnetcore.identity.entityframeworkcore.8.0.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.jsonpatch/8.0.4/microsoft.aspnetcore.jsonpatch.8.0.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/8.0.4/microsoft.aspnetcore.mvc.newtonsoftjson.8.0.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
@@ -34,6 +35,7 @@
     "/Users/mac/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.dependencymodel/8.0.0/microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.identity.core/8.0.4/microsoft.extensions.identity.core.8.0.4.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.extensions.identity.stores/8.0.4/microsoft.extensions.identity.stores.8.0.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
