@@ -14,6 +14,9 @@ namespace myWebApi.Models
         //Navigation property
         public  Stock? Stock { get; set; }
 
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
+
         internal static object? ToCommentDto()
         {
             throw new NotImplementedException();

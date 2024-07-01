@@ -13,6 +13,7 @@ namespace myWebApi.Mappers
                 Title = commentModel.Title,
                 Content = commentModel.Content,
                 CreadtedOn = commentModel.CreadtedOn,
+                CreatedBy = commentModel.AppUser.UserName,
                 StockId = commentModel.StockId,
             };
         }
