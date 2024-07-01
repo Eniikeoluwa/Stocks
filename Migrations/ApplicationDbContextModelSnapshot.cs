@@ -45,13 +45,13 @@ namespace myWebApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "90e015de-1cbe-4d57-9d3a-4caa0f0e713a",
+                            Id = "7e7e799c-f857-4cf6-b228-5adc11ddd2c2",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "619719b3-2a1d-4f9f-bc40-b205d4b4b7a0",
+                            Id = "202670ef-ad13-4e5c-b613-79100fab5706",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -184,9 +184,6 @@ namespace myWebApi.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
@@ -253,6 +250,21 @@ namespace myWebApi.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("myWebApi.Models.Portfolio", b =>
+                {
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("StockId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("AppUserId", "StockId");
+
+                    b.HasIndex("StockId");
+
+                    b.ToTable("Portfolios");
+                });
+
             modelBuilder.Entity("myWebApi.Models.Stock", b =>
                 {
                     b.Property<int>("Id")
@@ -282,7 +294,7 @@ namespace myWebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Stock");
+                    b.ToTable("Stocks");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -345,9 +357,35 @@ namespace myWebApi.Migrations
                     b.Navigation("Stock");
                 });
 
+            modelBuilder.Entity("myWebApi.Models.Portfolio", b =>
+                {
+                    b.HasOne("myWebApi.Models.AppUser", "AppUser")
+                        .WithMany("Portfolios")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("myWebApi.Models.Stock", "Stock")
+                        .WithMany("Portfolios")
+                        .HasForeignKey("StockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Stock");
+                });
+
+            modelBuilder.Entity("myWebApi.Models.AppUser", b =>
+                {
+                    b.Navigation("Portfolios");
+                });
+
             modelBuilder.Entity("myWebApi.Models.Stock", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("Portfolios");
                 });
 #pragma warning restore 612, 618
         }
